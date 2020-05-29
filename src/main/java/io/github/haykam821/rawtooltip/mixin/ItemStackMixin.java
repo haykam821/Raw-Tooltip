@@ -14,7 +14,12 @@ import net.minecraft.text.TranslatableText;
 @Mixin(ItemStack.class)
 public class ItemStackMixin {
 	@ModifyVariable(method = "getTooltip", name = "text", at = @At(value = "STORE", ordinal = 0))
-	public Text addRawId(Text itemName) {
+	public Text addRawId(Text itemName, PlayerEntity player, TooltipContext context) {
+		// Do not append raw ID if the tooltip context is not advanced
+		if (!context.isAdvanced()) {
+			return itemName;
+		}
+
 		Item item = ((ItemStack) (Object) this).getItem();
 		int rawId = Item.getRawId(item);
 
