@@ -1,0 +1,22 @@
+{
+	"schemaVersion": 1,
+	"id": "rawtooltip",
+	"version": "1.0.0",
+	"name": "Raw Tooltip",
+	"description": "Adds the raw ID to item tooltips.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Raw-Tooltip#readme",
+		"issues": "https://github.com/haykam821/Raw-Tooltip/issues"
+	},
+	"mixins": [
+		"rawtooltip.mixin.json"
+	],
+	"license": "MIT",
+	"icon": "assets/rawtooltip/icon.png",
+	"depends": {
+		"fabricloader": ">=0.4.0"
+	}
+}
