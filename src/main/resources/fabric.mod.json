@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "rawtooltip",
-	"version": "1.0.0",
+	"version": "${version}",
 	"name": "Raw Tooltip",
 	"description": "Adds the raw ID to item tooltips.",
 	"authors": [
