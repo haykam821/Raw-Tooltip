@@ -8,13 +8,13 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
+import net.minecraft.text.MutableText;
 import net.minecraft.text.TranslatableText;
 
 @Mixin(ItemStack.class)
 public class ItemStackMixin {
 	@ModifyVariable(method = "getTooltip", at = @At(value = "STORE", ordinal = 0))
-	public Text addRawId(Text itemName, PlayerEntity player, TooltipContext context) {
+	public MutableText addRawId(MutableText itemName, PlayerEntity player, TooltipContext context) {
 		// Do not append raw ID if the tooltip context is not advanced
 		if (!context.isAdvanced()) {
 			return itemName;
