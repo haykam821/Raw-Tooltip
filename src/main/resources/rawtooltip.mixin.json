@@ -2,7 +2,7 @@
 	"required": true,
 	"package": "io.github.haykam821.rawtooltip.mixin",
 	"compatibilityLevel": "JAVA_8",
-	"mixins": [
+	"client": [
 		"ItemStackMixin"
 	],
 	"injectors": {
